@@ -578,6 +578,8 @@ public class SmartMaterialSpinner extends AppCompatSpinner implements ValueAnima
                     position = hint != null ? position - 1 : position;
                     if (position >= 0) {
                         listener.onItemSelected(parent, view, position, id);
+                    } else {
+                        listener.onNothingSelected(parent);
                     }
                 }
             }
